@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'curso-componentes';
+  imgParent: string = '';
+
+  recibirDatos(dato: string) {
+    alert(dato);
+  }
 }

@@ -1,0 +1,10 @@
+<section class="section-products">
+    <h2>Productos</h2>
+
+    <div class="container-list-products">
+      <app-product *ngFor="let producto of products"
+      id="{{ producto.id }}" name="{{ producto.name }}" price="{{ producto.price }}" image="{{ producto.image }}" stock="{{ producto.stock }}"
+      >
+      </app-product>
+    </div>
+</section>

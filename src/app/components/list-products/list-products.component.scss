@@ -1,0 +1,12 @@
+.container-list-products {
+    display: flex;
+    gap: 1.3em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (min-width: 900px) {
+    .container-list-products {
+        gap: 1.6em;
+    }
+}
