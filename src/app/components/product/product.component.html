@@ -1,6 +1,13 @@
 <article class="container-product">
     <img [src]="image" alt="Imagen {{ name }}" loading="lazy" decoding="async" class="container-product__img">
-    <p class="container-product__paragraph">{{ name }}</p>
-    <p class="container-product__paragraph container-product__paragraph--right">$ {{ price }}</p>
-    <p class="container-product__paragraph container-product__paragraph--right">Stock: {{ stock }}</p>
+    <p class="container-product__paragraph">
+        {{ name }}
+    </p>
+    <p class="container-product__paragraph container-product__paragraph--right">
+        $ {{ price }}
+    </p>
+    <button (click)="addProductToCart()" [class.container-product__btn--hide]="productAvailable === false" class="container-product__btn" [disabled]="productAvailable === false">
+        <i class="fa-solid fa-cart-shopping container-product__icon" aria-hidden="true"></i>
+        {{ textButton }}
+    </button>
 </article>

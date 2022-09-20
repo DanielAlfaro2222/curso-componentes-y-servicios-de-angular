@@ -51,10 +51,18 @@ export class ListProductsComponent implements OnInit {
       stock: 10
     }
   ];
+  shoppingCart: Product[] = [];
+  total: number = 0;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  recibedProduct(product: Product): void {
+    this.shoppingCart.push(product);
+
+    this.total = this.shoppingCart.reduce((previous, current) => previous + Number(current.price), 0);
   }
 
 }

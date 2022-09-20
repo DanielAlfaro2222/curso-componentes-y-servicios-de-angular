@@ -1,0 +1,25 @@
+@use '../../../config' as *;
+
+.container-footer {
+    background-color: white;
+    font-style: italic;
+    text-align: center;
+    padding: 1.15em;
+    border-top: 2px solid $bg-border;
+    font-size: .9rem;
+
+    &__paragraph {
+        margin: 0;
+    }
+
+    &__link {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .container-footer {
+        font-size: 1rem;
+    }
+}

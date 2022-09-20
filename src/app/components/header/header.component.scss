@@ -1,0 +1,106 @@
+@use '../../../config' as *;
+
+.container-header-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__icon {
+        font-size: 1.35em;
+    }
+}
+
+.container-header {
+    background-color: white;
+    border-bottom: 2px solid $bg-border;
+    padding: 1.2em 1em 1.2em 1em;
+}
+
+.container-nav-mobile {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    z-index: 100;
+    padding: 1em;
+    transition: all ease-in-out .5s;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    text-align: center;
+
+    &__icon {
+        position: absolute;
+        right: 1em;
+        top: 1em;
+        font-size: 1.5rem;
+    }
+
+    &__list-elements {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__link {
+        color: inherit;
+    }
+
+    &--show {
+        transform: translateX(0);
+    }
+}
+
+.container-header-desktop {
+    display: none;
+}
+
+@media screen and (min-width: 900px) {
+    .container-header-mobile {
+        display: none;
+    }
+
+    .container-header-desktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .8em 1.2em .8em 1.2em;
+
+        &__icon {
+            font-size: 1.4rem;
+        }
+    }
+
+    .container-logo-brand {
+        display: flex;
+        column-gap: 4em;
+        align-items: center;
+
+        &__img {
+            width: 125px;
+        }
+
+        &__list-elements {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            list-style: none;
+            column-gap: 1.2em;
+        }
+
+        &__element:hover {
+            color: $bg-border;
+        }
+
+        &__link {
+            color: inherit;
+        }
+    }
+}

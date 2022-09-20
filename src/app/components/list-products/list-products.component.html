@@ -1,10 +1,19 @@
 <section class="section-products">
-    <h2>Productos</h2>
+    <h2 class="section-products__title">Productos</h2>
+
+    <div>
+      <p>
+        Cantidad de productos agregados al carrito: {{ shoppingCart.length }}
+      </p>
+      <p>
+        Total a pagar: $ {{ total }}
+      </p>
+    </div>
 
     <div class="container-list-products">
       <app-product *ngFor="let producto of products"
       id="{{ producto.id }}" name="{{ producto.name }}" price="{{ producto.price }}" image="{{ producto.image }}" stock="{{ producto.stock }}"
-      >
+      (addToCart)="recibedProduct($event)">
       </app-product>
     </div>
 </section>

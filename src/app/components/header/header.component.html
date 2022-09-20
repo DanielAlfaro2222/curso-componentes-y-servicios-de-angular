@@ -1,0 +1,67 @@
+<header class="container-header">
+    <div class="container-header-mobile">
+        <div class="container-header-mobile__icon" (click)="showOrHideMenu()">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </div>
+
+        <nav class="container-nav-mobile" [class.container-nav-mobile--show]="visibleMenu">
+            <i class="fa-solid fa-xmark container-nav-mobile__icon" aria-hidden="true" (click)="showOrHideMenu()"></i>
+
+            <ul class="container-nav-mobile__list-elements">
+                <li class="container-nav-mobile__element">
+                    <a href="#" class="container-nav-mobile__link">
+                        All
+                    </a>
+                </li>
+                <li class="container-nav-mobile__element">
+                    <a href="#" class="container-nav-mobile__link">
+                        Clothes
+                    </a>
+                </li>
+                <li class="container-nav-mobile__element">
+                    <a href="#" class="container-nav-mobile__link">
+                        Electronics
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div>
+            <img [src]="logoEmpresa" alt="Logo empresa" loading="lazy" decoding="async"> 
+        </div>
+
+        <div class="container-header-mobile__icon">
+            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+        </div>
+    </div>
+
+    <div class="container-header-desktop">
+        <div class="container-logo-brand">
+            <img [src]="logoEmpresa" alt="Logo empresa" loading="lazy" decoding="async" class="container-logo-brand__img"> 
+
+            <nav class="container-logo-brand__nav">
+                <ul class="container-logo-brand__list-elements">
+                    <li class="container-logo-brand__element">
+                        <a href="#" class="container-logo-brand__link">
+                            All
+                        </a>
+                    </li>
+                    <li class="container-logo-brand__element">
+                        <a href="#" class="container-logo-brand__link">
+                            Clothes
+                        </a>
+                    </li>
+                    <li class="container-logo-brand__element">
+                        <a href="#" class="container-logo-brand__link">
+                            Electronics
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container-header-desktop__icon">
+            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+        </div>
+    </div>
+</header>

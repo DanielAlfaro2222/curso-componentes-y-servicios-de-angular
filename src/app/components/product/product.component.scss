@@ -15,8 +15,28 @@
         margin: 0;
     }
 
+    &__icon {
+        margin-right: .5em;
+    }
+
+    &__btn {
+        height: 40px;
+        border: none;
+        border-radius: .5em;
+        background-color: rgb(55, 99, 55);
+        color: white;
+        font-size: .9rem;
+        cursor: pointer;
+    }
+
     &__paragraph--right {
         text-align: end;
+    }
+
+    &__btn--hide {
+        pointer-events: none;
+        cursor: none;
+        background-color: rgb(21, 38, 21);
     }
 }
 

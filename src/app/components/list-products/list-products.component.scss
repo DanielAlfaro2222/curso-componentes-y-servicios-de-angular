@@ -1,3 +1,11 @@
+.section-products {
+    margin-top: 1.7em;
+
+    &__title {
+        font-size: 1rem;
+    }
+}
+
 .container-list-products {
     display: flex;
     gap: 1.3em;
@@ -8,5 +16,11 @@
 @media screen and (min-width: 900px) {
     .container-list-products {
         gap: 1.6em;
+    }
+
+    .section-products {
+        &__title {
+            font-size: 1.25rem;
+        }
     }
 }

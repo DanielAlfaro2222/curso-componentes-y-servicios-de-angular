@@ -1,5 +1,4 @@
-$font: 'Roboto', sans-serif;
-$bg-color: rgba(241, 241, 241, 0.844);
+@use './config' as *;
 
 body {
     font-family: $font;
