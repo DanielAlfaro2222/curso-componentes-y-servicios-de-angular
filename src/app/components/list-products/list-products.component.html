@@ -12,7 +12,7 @@
 
     <div class="container-list-products">
       <app-product *ngFor="let producto of products"
-      id="{{ producto.id }}" name="{{ producto.name }}" price="{{ producto.price }}" image="{{ producto.image }}" stock="{{ producto.stock }}"
+      id="{{ producto.id }}" title="{{ producto.title }}" price="{{ producto.price }}" image="{{ producto.image }}" stock="{{ 10 }}"
       (addToCart)="recibedProduct($event)">
       </app-product>
     </div>

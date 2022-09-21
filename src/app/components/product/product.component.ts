@@ -8,10 +8,11 @@ import { Product } from 'src/app/models/Product.models';
 })
 export class ProductComponent implements OnInit {
   @Input() id: string = '';
-  @Input() name: string = '';
+  @Input() title: string = '';
+  @Input() description: string = '';
   @Input() price: string = '';
   @Input() image: string = '';
-  @Input() stock: number | string = 0;
+  @Input() stock: number | string = 10;
   @Output() addToCart: EventEmitter<Product> = new EventEmitter<Product>();
   productAvailable: boolean = true;
   textButton: string = "Agregar al carrito";
@@ -24,9 +25,10 @@ export class ProductComponent implements OnInit {
   addProductToCart(): void {
     this.addToCart.emit({
       id: this.id,
-      name: this.name,
+      title: this.title,
       price: this.price,
       image: this.image,
+      description: this.description,
       stock: this.stock
     });
 
