@@ -1,1 +1,1 @@
-# Curso componentes y servicios de angular
+# Curso de componentes y servicios de angular
