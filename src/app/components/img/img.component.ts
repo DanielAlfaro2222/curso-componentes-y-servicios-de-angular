@@ -6,14 +6,11 @@ import { EventEmitter, Output, OnChanges, SimpleChanges } from '@angular/core';
   templateUrl: './img.component.html',
   styleUrls: ['./img.component.scss']
 })
-export class ImgComponent implements OnInit, OnChanges {
+export class ImgComponent implements OnChanges {
   img: string = "https://www.w3schools.com/howto/img_avatar.png";
   @Output() datos: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log('Ocurrio un cambio', changes);
@@ -24,6 +21,7 @@ export class ImgComponent implements OnInit, OnChanges {
     this.datos.emit('Hola mundo');
   }
 
+  // eslint-disable-next-line @angular-eslint/no-input-rename
   @Input('img')
   set changeImg(value: string) {
     this.img = value;

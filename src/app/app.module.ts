@@ -10,6 +10,9 @@ import { ListProductsComponent } from './components/list-products/list-products.
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReversePipe } from './pipes/reverse/reverse.pipe';
+import { VocalsChangePipe } from './pipes/vocals/vocals-change.pipe';
+import { ExampleDirective } from './directives/example.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { HttpClientModule } from '@angular/common/http';
     ProductComponent,
     ListProductsComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ReversePipe,
+    VocalsChangePipe,
+    ExampleDirective
   ],
   imports: [
     BrowserModule,
